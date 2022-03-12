@@ -56,7 +56,7 @@ router.post("/reset-send", async (req, res) => {
       );
       if (ack) {
         // Email the user a unique verification link
-        const url = `http://localhost:3000/verify/${email}/${verificationToken}`;
+        const url = `https://password-reset-flow-frontend.netlify.app/verify/${email}/${verificationToken}`;
         transporter.sendMail({
           to: email,
           subject: "Verify Account to change password!",
